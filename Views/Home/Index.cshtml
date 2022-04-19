@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+        <h2 class="active">Inicio </h2>
+
+
+        <!-- Login Form -->
+        @using(Html.BeginForm("InicioSesion", "Convertidors", FormMethod.Post, new {enctype = "multipart/form-data"}))
+        { 
+            <input style="text-transform: uppercase;" type="text" id="login" class="fadeIn second" name="login" placeholder="Usuario">
+            <input type="password" id="password" class="fadeIn third" name="password" placeholder="Contraseña">
+            <input type="submit" class="fadeIn fourth" value="Iniciar Sesión">
+        }
+
+    </div>
+</div>

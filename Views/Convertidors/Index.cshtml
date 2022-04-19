@@ -1,0 +1,37 @@
+﻿@model IEnumerable<AppConversion.Models.Convertidor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Log</h2>
+<div>
+    <button class="btnTabla">
+        @Html.ActionLink("Conversión", "Create")
+    </button>
+</div>
+<br />
+<table class="table">
+    <tr>
+        <th>
+            Número
+        </th>
+        <th>
+            Número en letra
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Num)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroString)
+            </td>
+        </tr>
+    }
+
+</table>
